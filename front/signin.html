@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/header.css" />
+    <link rel="stylesheet" href="assets/css/footer.css" />
+    <script src="assets/js/header.js"></script>
+    <script src="assets/js/signin.js"></script>
+    <script src="assets/js/profile.js"></script>
+    <title>Harry Potter | Connexion</title>
+</head>
+<body>
+    <header>
+        <!-- ICI ON VA METTRE NOTRE NAVIGATION AVEC LE DARKMODE -->
+        <img src="assets/img/Logo_Harry_Potter.png" alt="Logo Harry Potter" class="logo">
+        <nav class="header">
+            <ul class="navigation">
+                <li>
+                    <a href="index.html">ACCUEIL</a>
+                </li>
+                <li>
+                    <a href="collection.html">MA COLLECTION</a>
+                </li>
+            </ul>
+            <ul class="account">
+                <li class="profil">
+                    <a href="profile.html">MON PROFIL</a>
+                </li>
+                <li class="logout">
+                    <a onclick="logout();">SE DÉCONNECTER</a>
+                </li>
+                <li class="signin">
+                    <a href="signin.html">CONNEXION</a>
+                </li>
+                <li class="signup">
+                    <a href="signup.html">S'INSCRIRE</a>
+                </li>
+            </ul>
+        </nav>
+        <div id="myMenu" class="menu">
+            <a id="closeButton" href="#" class="close">x</a>
+            <ul>
+                <li><a href="./index.html">ACCUEIL</a></li>
+                <li><a href="./collection.html">MA COLLECTION</a></li>
+                <li class="signin"><a href="./signin.html">CONNEXION</a></li>
+                <li class="signup"><a href="./signup.html">S'INSCRIRE</a></li>
+                <li class="profil"><a href="./profile.html">MON PROFIL</a></li>
+                <li class="logout"><a onclick="logout();">SE DÉCONNECTER</a></li>²
+            </ul>
+        </div>
+        <div class="open">
+            <a id="openButton" href="#">
+                <span class="menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </a>
+        </div>
+    </header>
+    <main>
+        <div class="wrapper-signin">
+            <div class="message-error">
+                <ul></ul>
+            </div>
+            <div class="message-fail">
+                Email ou mot de passe invalides.
+            </div>
+            <div class="message-success">
+                Connexion réussie avec succès ! Vous allez être redirigé vers la page d'accueil.
+            </div>
+            <form action="" method="post" enctype="multipart/form-data">
+                <h1>CONNEXION</h1>
+                <div class="input-box">
+                    <input type="text" id="email" placeholder="Email"/>
+                </div>
+                <div class="input-box">
+                    <input type="password" id="password" placeholder="Mot de passe"/>
+                </div>
+                <div class="signin-details" id="signin-details">
+                    <div class="forget-password">
+                        <a href="#">Nom d'utilisateur ou mot de passe oublié ?</a>
+                    </div>
+                    <div>
+                        <button type="submit" class="login">C'EST PARTI !</button>
+                    </div>
+                    <div class="signup-link">
+                        <p>Pas de profil ? <a href="signup.html">Inscrivez-vous gratuitement</a></p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer></footer>
+</body>
+</html>

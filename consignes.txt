@@ -1,0 +1,8 @@
+- site de collection et d'echange de cartes harry potter (html css js node.js iot)
+- correctement structuré et rangé
+- github
+- html = valide au test w3
+- css = flex, 3 transtitions et 2 keyframes, responsive, valide au test w3
+- js = sidenav pour mobile, bouton flotant en bas a droite -> modal echange carte, bouton de favori de carte, filtres des cartes, adress mail sauvegardé, recherche dynamique, page détail carte, api
+- node.js = incription connexion necessaire, ouverture de booster sur la homepage tt les 24h, page profil, cartes favori en haut
+- iot = consulting de cartes couleur maison

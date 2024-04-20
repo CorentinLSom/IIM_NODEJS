@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/header.css" />
+    <link rel="stylesheet" href="assets/css/footer.css" />
+    <script src="assets/js/details.js"></script>
+    <script src="assets/js/header.js"></script>
+    <script src="assets/js/profile.js"></script>
+    <title>Harry Potter | Détails</title>
+</head>
+<body>
+    <header>
+        <!-- ICI ON VA METTRE NOTRE NAVIGATION AVEC LE DARKMODE -->
+        <img src="assets/img/Logo_Harry_Potter.png" alt="Logo Harry Potter" class="logo">
+        <nav class="header">
+            <ul class="navigation">
+                <li>
+                    <a href="index.html">ACCUEIL</a>
+                </li>
+                <li>
+                    <a href="collection.html">MA COLLECTION</a>
+                </li>
+            </ul>
+            <ul class="account">
+                <li class="profil">
+                    <a href="profile.html">MON PROFIL</a>
+                </li>
+                <li class="logout">
+                    <a onclick="logout();">SE DÉCONNECTER</a>
+                </li>
+                <li class="signin">
+                    <a href="signin.html">CONNEXION</a>
+                </li>
+                <li class="signup">
+                    <a href="signup.html">S'INSCRIRE</a>
+                </li>
+            </ul>
+        </nav>
+        <div id="myMenu" class="menu">
+            <a id="closeButton" href="#" class="close">x</a>
+            <ul>
+                <li><a href="./index.html">ACCUEIL</a></li>
+                <li><a href="./collection.html">MA COLLECTION</a></li>
+                <li class="signin"><a href="./signin.html">CONNEXION</a></li>
+                <li class="signup"><a href="./signup.html">S'INSCRIRE</a></li>
+                <li class="profil"><a href="./profile.html">MON PROFIL</a></li>
+                <li class="logout"><a onclick="logout();">SE DÉCONNECTER</a></li>²
+            </ul>
+        </div>
+        <div class="open">
+            <a id="openButton" href="#">
+                <span class="menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </a>
+        </div>
+    </header>
+    <main>
+        <div id="card-details" class="details-template">
+            <!-- ICI ON METTRA UN BOUTON RETOUR -->
+            <h2 class="card-name">Nom</h2>
+            <div class="details-infos">
+                <div class="details-text">
+                    <div>
+                        <span class="details-title">Maison : </span>
+                        <span class="card-house">Maison</span>
+                    </div>
+                    <div>
+                        <span class="details-title">Acteur : </span>
+                        <span class="card-actor">Acteur</span>
+                    </div>
+                    <div>
+                        <span class="details-title">Date d'anniversaire : </span>
+                        <span class="card-birthday">Date d'anniversaire</span>
+                    </div>
+                    <div>
+                        <span class="details-title">Sang : </span>
+                        <span class="card-blood">Sang</span>
+                    </div>
+                    <div>
+                        <span class="details-title">Couleur des yeux : </span>
+                        <span class="card-eyes">Yeux</span>
+                    </div>
+                    <div>
+                        <span class="details-title">Couleur des cheveux : </span>
+                        <span class="card-hairs">Cheveux</span>
+                    </div>
+                    <div>
+                        <span class="details-title">Baguette magique : </span>
+                        <span class="card-wand">Baguette magique</span>
+                    </div>
+                    <div>
+                        <span class="details-title">Patronus : </span>
+                        <span class="card-patronus">Patronus</span>
+                    </div>
+                </div>
+                <img
+                src="https://hp-api.lainocs.fr/images/harry-potter.png"
+                alt="harry-potter"
+                class="details-img"/>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+</body>
+</html>

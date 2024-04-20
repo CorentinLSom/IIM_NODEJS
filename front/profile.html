@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/header.css" />
+    <link rel="stylesheet" href="assets/css/footer.css" />
+    <script src="assets/js/header.js"></script>
+    <script src="assets/js/profile.js"></script>
+    <script src="assets/js/account.js"></script>
+    <title>Harry Potter | Profil</title>
+</head>
+<body>
+    <!-- ICI ON VA METTRE NOS CARTES AVEC LA TABULATION-->
+    <header>
+        <!-- ICI ON VA METTRE NOTRE NAVIGATION AVEC LE DARKMODE -->
+        <img src="assets/img/Logo_Harry_Potter.png" alt="Logo Harry Potter" class="logo">
+        <nav class="header">
+            <ul class="navigation">
+                <li>
+                    <a href="index.html">ACCUEIL</a>
+                </li>
+                <li>
+                    <a href="collection.html">MA COLLECTION</a>
+                </li>
+            </ul>
+            <ul class="account">
+                <li class="profil">
+                    <a href="profile.html">MON PROFIL</a>
+                </li>
+                <li class="logout">
+                    <a onclick="logout();">SE DÉCONNECTER</a>
+                </li>
+                <li class="signin">
+                    <a href="signin.html">CONNEXION</a>
+                </li>
+                <li class="signup">
+                    <a href="signup.html">S'INSCRIRE</a>
+                </li>
+            </ul>
+        </nav>
+        <div id="myMenu" class="menu">
+            <a id="closeButton" href="#" class="close">x</a>
+            <ul>
+                <li><a href="./index.html">ACCUEIL</a></li>
+                <li><a href="./collection.html">MA COLLECTION</a></li>
+                <li class="signin"><a href="./signin.html">CONNEXION</a></li>
+                <li class="signup"><a href="./signup.html">S'INSCRIRE</a></li>
+                <li class="profil"><a href="./profile.html">MON PROFIL</a></li>
+                <li class="logout"><a onclick="logout();">SE DÉCONNECTER</a></li>²
+            </ul>
+        </div>
+        <div class="open">
+            <a id="openButton" href="#">
+                <span class="menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </a>
+        </div>
+    </header>
+    <main>
+        <div class="wrapper-profile">
+            <h1>Mon profil</h1>
+            <div>
+                <span class="details-title">nom :</span>
+                <span id="name"></span>
+            </div>
+            <div>
+                <span class="details-title">email :</span>
+                <span id="email"></span>
+            </div>
+            <div class="logout-profile">
+                <a onclick="logout();">SE DÉCONNECTER</a>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+</body>
+</html>

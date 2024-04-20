@@ -1,0 +1,449 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Poppins, sans-serif;
+    box-sizing: border-box;
+}
+
+.wrapper-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 90vh;
+    padding-top: 50px;
+    font-size: 20px;
+}
+
+.wrapper-signin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+}
+
+.wrapper-signin h1 {
+    font-size: 36px;
+    text-align: center;
+}
+
+.wrapper-signin .input-box {
+    width: 430px;
+    height: 50px;
+    margin: 30px 0 0 0;
+}
+
+.wrapper-signin .input-box input {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    border: none;
+    outline: none;
+    border: 2px solid;
+    border-color: lightgray;
+    border-radius: 8px;
+}
+
+.wrapper-signin .input-box input::placeholder {
+    color: darkgray;
+}
+
+.wrapper-signin .forget-password {
+    font-size: 14px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.wrapper-signin .forget-password a {
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.wrapper-signin .forget-password a:hover {
+    text-decoration: underline;
+}
+
+.wrapper-signin .login {
+    width: 100%;
+    height: 45px;
+    font-size: 16px;
+    color: white;
+    background-color: blueviolet;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.wrapper-signin .signup-link {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.wrapper-signin .signup-link p a {
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.wrapper-signin .signup-link p a:hover {
+    text-decoration: underline;
+}
+
+.main-signup {
+    display: flex;
+}
+
+.wrapper-signup {
+    display: flex;
+    flex: 1.5;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+}
+
+.signup-right {
+    flex: 1;
+    background-color: rgb(231, 231, 231);
+}
+
+.signup-right h1 {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 100px;
+    padding: 0 30px;
+}
+
+.wrapper-signup h1 {
+    font-size: 36px;
+    text-align: center;
+}
+
+.wrapper-signup .input-box {
+    width: 430px;
+    height: 50px;
+    margin: 30px 0 0 0;
+}
+
+.wrapper-signup .input-box input {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    border: none;
+    outline: none;
+    border: 2px solid;
+    border-color: lightgray;
+    border-radius: 8px;
+}
+
+.wrapper-signup .input-box input::placeholder {
+    color: darkgray;
+}
+
+.wrapper-signup .login {
+    width: 100%;
+    height: 45px;
+    font-size: 16px;
+    color: white;
+    background-color: blueviolet;
+    margin: 30px 0 0 0;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.wrapper-signup .signin-link {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.wrapper-signup .signin-link p a {
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.wrapper-signup .signin-link p a:hover {
+    text-decoration: underline;
+}
+
+.message-error {
+    width: 50%;
+    margin: 40px auto;
+    border: 1px solid rgb(212, 42, 0);
+    border-radius: 8px;
+    color: rgb(212, 42, 0);
+    background-color: rgba(212, 42, 0, 0.4);
+    padding: 16px 32px;
+    display: none;
+}
+
+.message-error.visible {
+    display: block;
+}
+
+.message-fail {
+    width: 50%;
+    margin: 40px auto;
+    border: 1px solid rgb(212, 42, 0);
+    border-radius: 8px;
+    color: rgb(212, 42, 0);
+    background-color: rgba(212, 42, 0, 0.4);
+    padding: 16px 32px;
+    display: none;
+}
+
+.message-fail.visible {
+    display: block;
+}
+
+.message-success {
+    width: 50%;
+    margin: 40px auto;
+    border: 1px solid rgb(81, 150, 2);
+    border-radius: 8px;
+    color: rgb(81, 150, 2);
+    background-color: rgba(113, 212, 0, 0.4);
+    padding: 16px 32px;
+    margin-bottom: 20px;
+    display: none;
+}
+
+.message-success.visible {
+    display: block;
+}
+
+.video-harry-potter {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+
+main h1 {
+    text-align: center;
+    font-size: 50px;
+}
+
+.main-title {
+    text-align: center;
+    font-size: 50px;
+    text-transform: uppercase;
+    padding: 20px 200px 20px 200px;
+    margin-bottom: 200px;
+}
+
+.booster-container {
+    height: 400px;
+}
+
+.list-container {
+    height: 400px;
+}
+
+/* Conteneur principal pour la liste de films */
+#cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Style des éléments des cartes individuels */
+.card,
+.card-template {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    align-items: center;
+    border-radius: 8px;
+    padding: 20px;
+    width: calc(100% - 40px); /* Full width by default */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    margin-bottom: 20px; /* Add some space between cards */
+}
+
+.card-img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: contain;
+}
+
+.card:hover,
+.card-template:hover {
+    transform: translateY(-5px);
+}
+
+.card h2,
+.card-template h2 {
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.card p,
+.card-template p {
+    font-size: 14px;
+    text-align: center;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.card a,
+.card-template a {
+    display: block;
+    text-align: center;
+    background-color: blueviolet;
+    color: #ffffff;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+.card a:hover,
+.card-template a:hover {
+    background-color: darkslateblue;
+}
+
+.details-title {
+    font-weight: bold;
+}
+
+.details-template h2 {
+    text-align: center;
+    font-size: 50px;
+    text-transform: uppercase;
+    padding: 30px;
+}
+
+.details-template span {
+    font-size: 26px;
+    line-height: 100px;
+}
+
+.details-img {
+    padding-top: 30px;
+    width: 60%;
+}
+
+.details-text {
+    width: 40%;
+    padding: 100px 0 0 100px;
+}
+
+.details-infos {
+    display: flex;
+    width: 100%;
+    flex: wrap;
+}
+
+.logout-profile {
+    padding-top: 30px;
+    cursor: pointer;
+}
+
+.logout-profile a {
+    background-color: blueviolet;
+    color:rgb(255, 255, 255);
+    padding: 10px 20px 10px 20px;
+    border-radius: 50px;
+}
+
+.logout-profile a:hover {
+    background-color: darkslateblue;
+    transition: 0.2s;
+}
+
+/* Responsive Design Adjustments */
+@media (min-width: 600px) {
+    .card,
+    .card-template {
+      width: calc(50% - 40px); /* Adjust for tablets */
+    }
+}
+
+@media (min-width: 900px) {
+    .card,
+    .card-template {
+      width: calc(33.333% - 40px); /* Adjust for desktops */
+    }
+}
+
+@media (min-width: 1200px) {
+    .card,
+    .card-template {
+      width: calc(25% - 40px); /* Adjust for larger screens */
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+    .main-signup {
+        display: block;
+    }
+
+    .wrapper-signup h1 {
+        font-size: 28px;
+    }
+
+    .wrapper-signup .input-box {
+        width: 280px;
+    }
+
+    .wrapper-signup .login {
+        width: 280px;
+    }
+
+    .wrapper-signin h1 {
+        font-size: 28px;
+    }
+
+    .wrapper-signin .input-box {
+        width: 280px;
+    }
+
+    .wrapper-signin .login {
+        width: 280px;
+    }
+
+    .signup-right {
+        display: none;
+    }
+
+    .details-infos {
+        flex-direction: column;
+    }
+
+    .details-text {
+        min-width: 100%;
+    }
+
+    .details-img {
+        min-width: 100%;
+    }
+
+    .details-template h2 {
+        font-size: 30px;
+    }
+
+    .details-template span {
+        font-size: 18px;
+        line-height: 50px;
+    }
+
+    .details-text {
+        width: 40%;
+        padding: 0 50px 0 50px;
+    }
+}

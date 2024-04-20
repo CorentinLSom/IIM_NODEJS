@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+
+header {
+    background-color: #02010a;
+    display: flex;
+    flex: wrap;
+    padding: 18px;
+    align-items: center;
+}
+
+.logo { 
+    height: 50px;
+}
+
+.header {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+}
+
+.navigation {
+    padding-left: 40px;
+    display: flex;
+    gap: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    list-style: none;
+    text-decoration: none;
+    color: rgb(107, 107, 107);
+}
+
+.navigation a:hover {
+    color: white;
+    transition: 0.2s;
+}
+
+.header a {
+    text-decoration: none;
+    color: darkgray;
+}
+
+.account {
+    display: flex;
+    padding-right: 10px;
+    gap: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    list-style: none;
+    text-decoration: none;
+}
+
+.profil {
+    display: none;
+}
+
+.profil a:hover {
+    color: white;
+    transition: 0.2s;
+}
+
+.logout {
+    display: none;
+    cursor: pointer;
+}
+
+.account .logout a {
+    background-color: blueviolet;
+    color:rgb(255, 255, 255);
+    padding: 10px 20px 10px 20px;
+    border-radius: 50px;
+}
+
+.account .logout a:hover {
+    background-color: darkslateblue;
+    transition: 0.2s;
+}
+
+.account .signin a {
+    background-color: rgb(255, 255, 255);
+    color: blueviolet;
+    padding: 10px 20px 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.account .signin a:hover {
+    color: darkslateblue;
+    transition: 0.2s;
+}
+
+.account .signup a {
+    background-color: blueviolet;
+    color:rgb(255, 255, 255);
+    padding: 10px 20px 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.account .signup a:hover {
+    background-color: darkslateblue;
+    transition: 0.2s;
+}
+
+.signin-details {
+    display: block;
+}
+
+.menu {
+    height: 100%;
+    width: 75%;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    right: -75%;
+    background-color: rgb(15, 15, 15);
+    padding-top: 80px;
+    transition: right 0.5s;
+}
+
+.menu a {
+    padding-top: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 24px;
+    color: darkgray;
+    display: block;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #ffffff;
+}
+
+.menu ul {
+    list-style-type: none;
+    text-align: right;
+    padding-right: 25px;
+    margin: 0;
+}
+
+.menu.active {
+    right: 0px;
+}
+
+.menu .close {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+}
+
+.open {
+    display: flex;
+    align-items: center;
+}
+
+.menu-icon span {
+    display: none;
+    width: 35px;
+    height: 5px;
+    background-color: darkgray;
+    border-radius: 50px;
+    margin: 0px 0px 6px 30px;
+}
+
+
+@media screen and (max-width: 800px) {
+    .menu-icon span {
+        display: block;
+    }
+    .account {
+        display: none;
+    }
+    .navigation {
+        display: none;
+    }
+}
