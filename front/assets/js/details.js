@@ -29,7 +29,22 @@ document.addEventListener("DOMContentLoaded", function () {
         template.querySelector(".card-actor").textContent = card.actor;
         template.querySelector(".details-img").src = card.image;
         template.querySelector(".details-img").alt = card.slug;
+        
+        let lastHouseVisited = card.house;
+        console.log(lastHouseVisited);
+
+        fetch("http://localhost:3000/iot/house", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                Iot:lastHouseVisited,
+            }),
+        });
     }
 
     fetchCard(cardId);
+
+
 });

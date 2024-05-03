@@ -2,6 +2,7 @@ import express from "express";
 import UsersController from "../controllers/UsersController.js";
 import AuthentificationController from "../controllers/AuthentificationController.js";
 import AuthentificationMiddleware from "../middlewares/AuthentificationMiddleware.js";
+import { getIot, house } from "../controllers/IotController.js"
 
 const router = express.Router();
 
@@ -12,5 +13,7 @@ router.put("/users/:id", UsersController.update); // MODIFIER UN UTILISATEUR
 router.delete("/users/:id", UsersController.destroy); // SUPPRIMER UN UTILISATEUR
 router.get("/getMyProfile", AuthentificationMiddleware.authentification, UsersController.getMyProfile);
 router.post("/login", AuthentificationController.login);
+router.get("/iot/iot", getIot);
+router.post("/iot/house", house);
 
 export default router;
