@@ -2,10 +2,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const params = new URLSearchParams(window.location.search);
     const cardId = params.get("id");
-    console.log(cardId)
 
     async function fetchCard(id) {
-        console.log(id);
         const url = `https://hp-api.lainocs.fr/characters`;
         const response = await fetch(url);
         const data = await response.json();
@@ -13,7 +11,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function displayCard(card) {
-        console.log(card);
         const template = document.getElementById("card-details");
 
         template.style.display = "block"; // Rend la carte visible
@@ -31,7 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
         template.querySelector(".details-img").alt = card.slug;
         
         let lastHouseVisited = card.house;
-        console.log(lastHouseVisited);
 
         fetch("http://localhost:3000/iot/house", {
             method: "POST",

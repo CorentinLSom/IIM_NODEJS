@@ -18,14 +18,14 @@ model User {
   email String  @unique
   name  String?
   password String
-  posts Post[]
+  cards UserCards[]
 }
 
-model Post {
-  id        Int     @id @default(autoincrement())
-  title     String
-  content   String?
-  published Boolean @default(false)
-  author    User    @relation(fields: [authorId], references: [id])
-  authorId  Int
+model UserCards {
+  user_id      Int
+  user         User      @relation(fields: [user_id], references: [id])
+  card_id      Int
+  is_favorite  Boolean   @default(false)
+  my_card      Boolean   @default(false)
+  @@id([user_id, card_id])
 }

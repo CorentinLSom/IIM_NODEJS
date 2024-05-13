@@ -10,15 +10,14 @@ CREATE TABLE `User` (
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 -- CreateTable
-CREATE TABLE `Post` (
-    `id` INTEGER NOT NULL AUTO_INCREMENT,
-    `title` VARCHAR(191) NOT NULL,
-    `content` VARCHAR(191) NULL,
-    `published` BOOLEAN NOT NULL DEFAULT false,
-    `authorId` INTEGER NOT NULL,
+CREATE TABLE `user_cards` (
+    `user_id` INTEGER NOT NULL,
+    `card_id` INTEGER NOT NULL,
+    `is_favorite` BOOLEAN NOT NULL DEFAULT false,
+    `my_card` BOOLEAN NOT NULL DEFAULT false,
 
-    PRIMARY KEY (`id`)
+    PRIMARY KEY (`user_id`, `card_id`)
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 -- AddForeignKey
-ALTER TABLE `Post` ADD CONSTRAINT `Post_authorId_fkey` FOREIGN KEY (`authorId`) REFERENCES `User`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE;
+ALTER TABLE `user_cards` ADD CONSTRAINT `user_id_fkey` FOREIGN KEY (`user_id`) REFERENCES `User`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE;

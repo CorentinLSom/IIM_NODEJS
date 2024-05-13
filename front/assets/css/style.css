@@ -11,9 +11,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 90vh;
-    padding-top: 50px;
+    padding-top: 10px;
     font-size: 20px;
+}
+
+.profile-picture {
+    width: 250px;
+    padding-bottom: 20px;
 }
 
 .wrapper-signin {
@@ -110,6 +114,7 @@
 .signup-right {
     flex: 1;
     background-color: rgb(231, 231, 231);
+    overflow: hidden;
 }
 
 .signup-right h1 {
@@ -117,6 +122,55 @@
     text-align: center;
     margin-top: 100px;
     padding: 0 30px;
+}
+
+.diapo-wrapper {
+    display: flex;
+    position: relative;
+}
+
+.diapo-wrapper > * + * {
+    position: absolute;
+    top: 0;
+    left: 100px;
+}
+
+.diapo img {
+    animation: fade-in-out 72s ease infinite 0s;
+    opacity: 0;
+}
+
+.diapo img:nth-child(1) {animation-delay: 0s}
+.diapo img:nth-child(2) {animation-delay: 9s}
+.diapo img:nth-child(3) {animation-delay: 18s}
+.diapo img:nth-child(4) {animation-delay: 27s}
+.diapo img:nth-child(5) {animation-delay: 36s}
+.diapo img:nth-child(6) {animation-delay: 45s}
+.diapo img:nth-child(7) {animation-delay: 54s}
+.diapo img:nth-child(8) {animation-delay: 63s}
+
+@keyframes fade-in-out {
+    0%, 100% {
+        opacity: 0;
+    }
+    1.39% {
+        opacity: 1;
+    }
+    12.50% {
+        opacity: 1;
+    }
+    13.89% {
+        opacity: 0;
+    }
+}
+
+.signupImg {
+    display: block;
+    max-width: 600px;
+    max-height: 600px;
+    padding-top: 20px;
+    align-items: center;
+    overflow: hidden;
 }
 
 .wrapper-signup h1 {
@@ -302,6 +356,7 @@ main h1 {
 .card a,
 .card-template a {
     display: block;
+    width: 75%;
     text-align: center;
     background-color: blueviolet;
     color: #ffffff;
@@ -316,15 +371,76 @@ main h1 {
     background-color: darkslateblue;
 }
 
+.buttons {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+}
+
+.like-button {
+    display: block;
+    cursor: pointer;
+    width: 20%;
+    border: none;
+    font: inherit;
+    font-weight: 600;
+    background-color: rgb(235, 235, 235);
+    color: rgb(241, 60, 60);
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+.like-button:hover {
+    background-color: rgb(241, 60, 60);
+    color: rgb(255, 255, 255);
+}
+
+.unlike-button {
+    display: none;
+    cursor: pointer;
+    width: 20%;
+    border: none;
+    font: inherit;
+    font-weight: 600;
+    background-color: rgb(241, 60, 60);
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+.unlike-button:hover {
+    background-color: rgb(235, 235, 235);
+    color: rgb(241, 60, 60);
+}
+
 .details-title {
     font-weight: bold;
 }
 
-.details-template h2 {
+.button-back {
+    font-weight: 500;
+    text-decoration: none;
+    background-color: rgb(235, 235, 235);
+    color: rgb(134, 134, 134);  
+    padding: 10px 20px 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.2s;
+    margin-left: 50px;
+}
+
+.button-back:hover {
+    background-color: rgb(201, 201, 201);
+    color: rgb(97, 97, 97);
+}
+
+.card-name {
+    align-self: center;
+    width: 100%;
     text-align: center;
     font-size: 50px;
+    padding-top: 30px;
     text-transform: uppercase;
-    padding: 30px;
 }
 
 .details-template span {
@@ -333,23 +449,27 @@ main h1 {
 }
 
 .details-img {
-    padding-top: 30px;
-    width: 60%;
+    width: 616px;
+    height: 810px;
 }
 
 .details-text {
-    width: 40%;
-    padding: 100px 0 0 100px;
+    width: 50%;
+    padding-left: 100px;
+    padding-top: 10px;
 }
 
 .details-infos {
     display: flex;
     width: 100%;
+    justify-content: space-around;
     flex: wrap;
+    padding-top: 20px;
 }
 
 .logout-profile {
     padding-top: 30px;
+    padding-bottom: 30px;
     cursor: pointer;
 }
 
@@ -363,6 +483,48 @@ main h1 {
 .logout-profile a:hover {
     background-color: darkslateblue;
     transition: 0.2s;
+}
+
+.filterBar {
+    display: flex;
+    justify-content: space-around;
+}
+
+.filterBar select {
+    width: 20rem;
+    appearance: none;
+    border: 0;
+    outline: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border: 1px solid #ddd;
+    align-items: center;
+    font: inherit;
+    padding: 1rem 4rem 1rem 1rem;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.search {
+    width: 20rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border: 1px solid #ddd;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.search .material-icons {
+    color: #666;
+}
+
+.search input{
+    width: 17rem;
+    font: inherit;
+    padding: 1rem 4rem 1rem 1rem;
+    border-radius: 8px;
+    border: none;
+    outline: none;
 }
 
 /* Responsive Design Adjustments */
@@ -387,8 +549,11 @@ main h1 {
     }
 }
 
-
 @media screen and (max-width: 800px) {
+    main h1 {
+        font-size: 30px;
+        padding-top: 20px;
+    }
     .main-signup {
         display: block;
     }
@@ -417,6 +582,14 @@ main h1 {
         width: 280px;
     }
 
+    .wrapper-signin .signup-link {
+        font-size: 12px;
+    }
+
+    .wrapper-signin .forget-password {
+        font-size: 12px;
+    }
+
     .signup-right {
         display: none;
     }
@@ -430,7 +603,10 @@ main h1 {
     }
 
     .details-img {
-        min-width: 100%;
+        max-height: 400px;
+        max-width: 304px;
+        align-self: center;
+        padding-top: 20px;
     }
 
     .details-template h2 {
@@ -438,12 +614,75 @@ main h1 {
     }
 
     .details-template span {
-        font-size: 18px;
-        line-height: 50px;
+        font-size: 10px;
+        line-height: 20px;
     }
 
     .details-text {
         width: 40%;
         padding: 0 50px 0 50px;
+    }
+
+    .button-back {
+        font-weight: 500;
+        text-decoration: none;
+        background-color: rgb(235, 235, 235);
+        color: rgb(134, 134, 134);  
+        padding: 10px 20px 10px 20px;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: 0.2s;
+        margin-left: 50px;
+    }
+
+    .profile-picture {
+        width: 150px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .details-img {
+        width: 578px;
+        height: 760px;
+        padding-right: 0;
+    }
+
+    .filterBar select {
+        width: 18rem;
+    }
+
+    .search {
+        width: 18rem;
+    }
+
+    .search input {
+        width: 16rem;
+    }
+
+    .details-template span {
+        font-size: 20px;
+        line-height: 75px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .filterBar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .filterBar select {
+        width: 18rem;
+        margin-top: 20px;
+    }
+
+    .search {
+        width: 18rem;
+        margin-top: 20px;
+    }
+
+    .search input {
+        width: 16rem;
     }
 }

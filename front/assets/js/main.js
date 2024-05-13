@@ -1,10 +1,11 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", async function () {
 
     async function fetchCards() {
         const url = `https://hp-api.lainocs.fr/characters`;
         const response = await fetch(url);
         const data = await response.json();
         displayCards(data);
+        console.log("fetchCards");
     }
 
     function displayCards(cards) {
@@ -24,8 +25,13 @@ document.addEventListener("DOMContentLoaded", function () {
         cardCard.querySelector(".card-img").src = card.image;
         cardCard.querySelector(".card-img").alt = card.slug;
         cardCard.querySelector(".card-details-link").href = `details.html?id=${card.id}`;container.appendChild(cardCard);
+        cardCard.querySelector(".like-button").onclick = function() {actionCard(card.id, "likeCard")};
+        cardCard.querySelector(".unlike-button").onclick = function() {actionCard(card.id, "unlikeCard")};
+        cardCard.querySelector(".like-button").id = "likeButton_" + card.id;
+        cardCard.querySelector(".unlike-button").id = "unlikeButton_" + card.id;
         });
     }
 
-    fetchCards();
+    await fetchCards();
+    likedCards();
 });

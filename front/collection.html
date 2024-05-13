@@ -6,9 +6,13 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/header.css" />
     <link rel="stylesheet" href="assets/css/footer.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <script src="assets/js/main.js"></script>
     <script src="assets/js/header.js"></script>
     <script src="assets/js/profile.js"></script>
+    <script src="assets/js/filter.js"></script>
+    <script src="assets/js/search.js"></script>
+    <script src="assets/js/like.js"></script>
     <title>Harry Potter | Collection</title>
 </head>
 <body>
@@ -22,7 +26,7 @@
                     <a href="index.html">ACCUEIL</a>
                 </li>
                 <li>
-                    <a href="collection.html">MA COLLECTION</a>
+                    <a href="collection.html">CARTES</a>
                 </li>
             </ul>
             <ul class="account">
@@ -44,7 +48,7 @@
             <a id="closeButton" href="#" class="close">x</a>
             <ul>
                 <li><a href="./index.html">ACCUEIL</a></li>
-                <li><a href="./collection.html">MA COLLECTION</a></li>
+                <li><a href="./collection.html">CARTES</a></li>
                 <li class="signin"><a href="./signin.html">CONNEXION</a></li>
                 <li class="signup"><a href="./signup.html">S'INSCRIRE</a></li>
                 <li class="profil"><a href="./profile.html">MON PROFIL</a></li>
@@ -63,7 +67,27 @@
     </header>
     <body>
         <main>
-            <h1>MA COLLECTION</h1>
+            <h1>LISTE DES CARTES</h1>
+            <div class="filterBar">
+                <select id="maisonFilter">
+                    <option value="(all)">Toutes les maisons</option>
+                    <option value="Gryffindor">Gryffindor</option>
+                    <option value="Hufflepuff">Hufflepuff</option>
+                    <option value="Ravenclaw">Ravenclaw</option>
+                    <option value="Slytherin">Slytherin</option>
+                    <option value="">Other</option>
+                </select>
+                <div id="searchWrapper" class="search">
+                    <input
+                        type="text"
+                        name="searchBar"
+                        class="searchBar"
+                        id="searchBar"
+                        placeholder="Rechercher une carte ..."
+                    />
+                    <i class="material-icons">search</i>
+                </div>    
+            </div>
             <div id="cards-container">
                 <div id="card-template" class="card" style="display: none">
                     <img
@@ -73,7 +97,11 @@
                     />
                     <h2 class="card-name">Harry Potter</h2>
                     <p class="card-house">Gryffindor</p>
-                    <a class="card-details-link" href="details.html?id=">Voir les détails</a>
+                    <div class="buttons">
+                        <a class="card-details-link" href="details.html?id=">Voir les détails</a>
+                        <button class="like-button">Like</button>
+                        <button class="unlike-button">Unlike</button>
+                    </div>
                 </div>
             </div>
         </main>

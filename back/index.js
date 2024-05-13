@@ -1,5 +1,5 @@
 import express from "express";
-import router from "./back/routes/start.js";
+import router from "./routes/start.js";
 import cors from"cors";
 
 import bodyParser from "body-parser";
@@ -8,7 +8,6 @@ import ip from "ip";
 const app = express();
 const ipAddr = ip.address();
 
-// let lastHouseVisited = "Gryffondor";
 app.use(cors());
 
 app.use(bodyParser.json());
