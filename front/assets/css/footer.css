@@ -10,7 +10,6 @@
 footer {
     background-color: #02010a;
     display: flex;
-    flex: wrap;
     min-height: 100px;
     align-items: center;
 }

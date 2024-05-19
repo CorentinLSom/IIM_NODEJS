@@ -10,6 +10,7 @@
     <script src="assets/js/header.js"></script>
     <script src="assets/js/profile.js"></script>
     <script src="assets/js/account.js"></script>
+    <script src="assets/js/mycard.js"></script>
     <title>Harry Potter | Profil</title>
 </head>
 <body>
@@ -48,7 +49,7 @@
                 <li class="signin"><a href="./signin.html">CONNEXION</a></li>
                 <li class="signup"><a href="./signup.html">S'INSCRIRE</a></li>
                 <li class="profil"><a href="./profile.html">MON PROFIL</a></li>
-                <li class="logout"><a onclick="logout();">SE DÉCONNECTER</a></li>²
+                <li class="logout"><a onclick="logout();">SE DÉCONNECTER</a></li>
             </ul>
         </div>
         <div class="open">
@@ -78,6 +79,20 @@
             </div>
         </div>
         <h1>MES CARTES</h1>
+        <div id="cards-container">
+            <div id="card-template" class="card" style="display: none">
+                <img
+                    src="https://hp-api.lainocs.fr/images/harry-potter.png"
+                    alt="harry-potter"
+                    class="card-img"
+                />
+                <h2 class="card-name">Harry Potter</h2>
+                <p class="card-house">Gryffindor</p>
+                <div class="buttons">
+                    <a class="card-details-link" href="details.html?id=">Voir les détails</a>
+                </div>
+            </div>
+        </div>
     </main>
     <footer></footer>
 </body>

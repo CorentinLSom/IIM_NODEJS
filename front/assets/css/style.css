@@ -293,10 +293,6 @@ main h1 {
     margin-bottom: 200px;
 }
 
-.booster-container {
-    height: 400px;
-}
-
 .list-container {
     height: 400px;
 }
@@ -377,10 +373,15 @@ main h1 {
     justify-content: space-between;
 }
 
+.card-details-link {
+    flex: 1;
+}
+
 .like-button {
     display: block;
     cursor: pointer;
     width: 20%;
+    margin-left: 20px;
     border: none;
     font: inherit;
     font-weight: 600;
@@ -399,6 +400,7 @@ main h1 {
     display: none;
     cursor: pointer;
     width: 20%;
+    margin-left: 20px;
     border: none;
     font: inherit;
     font-weight: 600;
@@ -463,7 +465,6 @@ main h1 {
     display: flex;
     width: 100%;
     justify-content: space-around;
-    flex: wrap;
     padding-top: 20px;
 }
 

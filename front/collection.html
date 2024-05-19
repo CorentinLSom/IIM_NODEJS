@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/header.css" />
-    <link rel="stylesheet" href="assets/css/footer.css" />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <script src="assets/js/main.js"></script>
     <script src="assets/js/header.js"></script>
@@ -52,7 +52,7 @@
                 <li class="signin"><a href="./signin.html">CONNEXION</a></li>
                 <li class="signup"><a href="./signup.html">S'INSCRIRE</a></li>
                 <li class="profil"><a href="./profile.html">MON PROFIL</a></li>
-                <li class="logout"><a onclick="logout();">SE DÉCONNECTER</a></li>²
+                <li class="logout"><a onclick="logout();">SE DÉCONNECTER</a></li>
             </ul>
         </div>
         <div class="open">
@@ -65,47 +65,47 @@
             </a>
         </div>
     </header>
-    <body>
-        <main>
-            <h1>LISTE DES CARTES</h1>
-            <div class="filterBar">
-                <select id="maisonFilter">
-                    <option value="(all)">Toutes les maisons</option>
-                    <option value="Gryffindor">Gryffindor</option>
-                    <option value="Hufflepuff">Hufflepuff</option>
-                    <option value="Ravenclaw">Ravenclaw</option>
-                    <option value="Slytherin">Slytherin</option>
-                    <option value="">Other</option>
-                </select>
-                <div id="searchWrapper" class="search">
-                    <input
-                        type="text"
-                        name="searchBar"
-                        class="searchBar"
-                        id="searchBar"
-                        placeholder="Rechercher une carte ..."
-                    />
-                    <i class="material-icons">search</i>
-                </div>    
-            </div>
-            <div id="cards-container">
-                <div id="card-template" class="card" style="display: none">
-                    <img
-                        src="https://hp-api.lainocs.fr/images/harry-potter.png"
-                        alt="harry-potter"
-                        class="card-img"
-                    />
-                    <h2 class="card-name">Harry Potter</h2>
-                    <p class="card-house">Gryffindor</p>
-                    <div class="buttons">
-                        <a class="card-details-link" href="details.html?id=">Voir les détails</a>
-                        <button class="like-button">Like</button>
-                        <button class="unlike-button">Unlike</button>
-                    </div>
+    <main>
+        <h1>LISTE DES CARTES</h1>
+        <div class="filterBar">
+            <select id="maisonFilter">
+                <option value="(all)">Toutes les maisons</option>
+                <option value="Gryffindor">Gryffindor</option>
+                <option value="Hufflepuff">Hufflepuff</option>
+                <option value="Ravenclaw">Ravenclaw</option>
+                <option value="Slytherin">Slytherin</option>
+                <option value="">Other</option>
+            </select>
+            <div id="searchWrapper" class="search">
+                <input
+                    type="text"
+                    name="searchBar"
+                    class="searchBar"
+                    id="searchBar"
+                    placeholder="Rechercher une carte ..."
+                >
+                <i class="material-icons">search</i>
+            </div>    
+        </div>
+        <div id="cards-container">
+            <div id="card-template" class="card" style="display: none">
+                <img
+                    src="https://hp-api.lainocs.fr/images/harry-potter.png"
+                    alt="harry-potter"
+                    class="card-img"
+                >
+                <h2 class="card-name">Harry Potter</h2>
+                <p class="card-house">Gryffindor</p>
+                <div class="buttons">
+                    <a class="card-details-link" href="details.html?id=">Voir les détails</a>
+                    <button class="like-button">Like</button>
+                    <button class="unlike-button">Unlike</button>
                 </div>
             </div>
-        </main>
-    </body>
-    <footer></footer>
+        </div>
+    </main>
+    <footer>
+        <p>Corentin Le Sommer</p>
+    </footer>
 </body>
 </html>
