@@ -124,46 +124,6 @@
     padding: 0 30px;
 }
 
-.diapo-wrapper {
-    display: flex;
-    position: relative;
-}
-
-.diapo-wrapper > * + * {
-    position: absolute;
-    top: 0;
-    left: 100px;
-}
-
-.diapo img {
-    animation: fade-in-out 72s ease infinite 0s;
-    opacity: 0;
-}
-
-.diapo img:nth-child(1) {animation-delay: 0s}
-.diapo img:nth-child(2) {animation-delay: 9s}
-.diapo img:nth-child(3) {animation-delay: 18s}
-.diapo img:nth-child(4) {animation-delay: 27s}
-.diapo img:nth-child(5) {animation-delay: 36s}
-.diapo img:nth-child(6) {animation-delay: 45s}
-.diapo img:nth-child(7) {animation-delay: 54s}
-.diapo img:nth-child(8) {animation-delay: 63s}
-
-@keyframes fade-in-out {
-    0%, 100% {
-        opacity: 0;
-    }
-    1.39% {
-        opacity: 1;
-    }
-    12.50% {
-        opacity: 1;
-    }
-    13.89% {
-        opacity: 0;
-    }
-}
-
 .signupImg {
     display: block;
     max-width: 600px;
@@ -285,12 +245,45 @@ main h1 {
     font-size: 50px;
 }
 
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-logo {
+    height: 300px;
+    width: 300px;
+}
+
 .main-title {
     text-align: center;
     font-size: 50px;
     text-transform: uppercase;
-    padding: 20px 200px 20px 200px;
-    margin-bottom: 200px;
+    padding: 20px;
+}
+
+.button-flex {
+    display: flex;
+    justify-content: center;
+}
+
+.button-booster {
+    font: inherit;
+    font-size: 26px;
+    font-weight: bold;
+    background-color: blueviolet;
+    color:rgb(255, 255, 255);
+    padding: 10px 20px 10px 20px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 50px;
+}
+
+.button-booster:hover {
+    background-color: darkslateblue;
+    transition: 0.2s;
 }
 
 .list-container {
@@ -550,11 +543,21 @@ main h1 {
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 800px) { /* Responsive Telephone */
     main h1 {
         font-size: 30px;
         padding-top: 20px;
     }
+
+    .main-title {
+        font-size: 30px;
+    }
+
+    .main-logo {
+        height: 200px;
+        width: 200px;
+    }
+
     .main-signup {
         display: block;
     }
@@ -641,7 +644,7 @@ main h1 {
     }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1200px) { /* Responsive Tablette */
     .details-img {
         width: 578px;
         height: 760px;
@@ -666,7 +669,7 @@ main h1 {
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 500px) { /* Responsive Telephone */
     .filterBar {
         display: flex;
         flex-direction: column;
@@ -686,4 +689,24 @@ main h1 {
     .search input {
         width: 16rem;
     }
+
+    .main-title {
+        font-size: 20px;
+        padding-bottom: 40px;
+    }
+
+    .main-logo {
+        height: 150px;
+        width: 150px;
+        margin-bottom: 20px;
+    }
+
+    main h1 {
+        font-size: 20px;
+    }
+
+    .button-booster {
+        font-size: 16px;
+    }
+
 }

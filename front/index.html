@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/header.css" />
-    <link rel="stylesheet" href="assets/css/footer.css" />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <script src="assets/js/header.js"></script>
     <script src="assets/js/profile.js"></script>
@@ -65,8 +65,11 @@
         <video autoplay muted loop class="video-harry-potter">
             <source src="assets/img/video-harry-potter.mp4" type="video/mp4">
         </video>
-        <h2 class="main-title">Rejoignez le monde magique des cartes à collectionner de l'univers d'Harry Potter !</h2>
-        <h1>Ouvrez votre booster quotidien !</h1>
+        <div class="wrapper">
+            <h2 class="main-title">Rejoignez le monde magique des cartes à collectionner de l'univers d'Harry Potter !</h2>
+            <img src="assets/img/Logo_Harry_Potter.png" alt="logo" class="main-logo">
+            <h1>Ouvrez votre booster quotidien !</h1>
+        </div>
         <div class="booster-container">
             <div id="cards-container">
                 <div id="card-template" class="card" style="display: none">
@@ -74,7 +77,7 @@
                         src="https://hp-api.lainocs.fr/images/harry-potter.png"
                         alt="harry-potter"
                         class="card-img"
-                    />
+                    >
                     <h2 class="card-name">Harry Potter</h2>
                     <p class="card-house">Gryffindor</p>
                     <div class="buttons">
@@ -82,7 +85,9 @@
                     </div>
                 </div>
             </div>
-            <button class="button-booster" id="buttonBooster">ouvrir booster</button>
+            <div class="button-flex">
+                <button class="button-booster" id="buttonBooster">OUVRIR BOOSTER</button>
+            </div>
         </div>
     </main>
     <footer></footer>
